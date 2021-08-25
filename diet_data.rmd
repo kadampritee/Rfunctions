@@ -1,0 +1,28 @@
+#load the library
+``` library("tidyverse")
+```
+
+#To begin, download this file and unzip it into your R working directory.  
+#http://s3.amazonaws.com/practice_assignment/diet_data.zip
+#You can do  this in R with the following code:
+  
+``` dataset_url <-"http://s3.amazonaws.com/practice_assignment/diet_data.zip"
+download.file(dataset_url,"diet_data.zip")
+unzip("diet_data.zip",exdir = "diet_data")
+```
+#see the working directory
+ 
+``` getwd()
+```
+#So assuming you've unzipped the file into your R directory, 
+you should have a folder called diet_data.  In that folder there are five files.  Let's get a list of those files:
+
+``` list.files("diet_data")
+```
+
+``` andy <- read.csv("diet_data/Andy.csv")
+View(andy)
+```
+``` length(andy$Day)
+dim(andy)
+```
